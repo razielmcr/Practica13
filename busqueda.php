@@ -35,7 +35,6 @@ echo "</tr>";
 
 
 ?>
-<!DOCTYPE html>
 <html>
 <head>
 	<title>Contactos encontrados</title>
