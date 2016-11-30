@@ -1,7 +1,7 @@
 <?php
 $busqueda=$_POST["busqueda"];
 
-$consulta="SELECT * FROM contacto WHERE Nombre LIKE '$busqueda' or Apellido LIKE '$busqueda'";
+$consulta="SELECT * FROM contacto WHERE Nombre LIKE('%$busqueda%') or Apellido LIKE('%$busqueda%')";
 $user="root";
 $pass="pass";
 $server="localhost";
