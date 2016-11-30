@@ -1,7 +1,7 @@
 <?php
 $busqueda=$_POST["busqueda"];
 
-$consulta="SELECT * FROM contacto WHERE Nombre = '$busqueda' or Apellido = '$busqueda'";
+$consulta="SELECT * FROM contacto WHERE Nombre LIKE '$busqueda' or Apellido LIKE '$busqueda'";
 $user="root";
 $pass="pass";
 $server="localhost";
@@ -10,7 +10,9 @@ $db="agendacompleta";
 $link = mysql_connect($server,$user,$pass); 
 mysql_select_db($db, $link); 
 $result = mysql_query($consulta, $link);
+$encon = False;
 while ($row = mysql_fetch_array($result)) {
+	$encon = True;
 	echo "<tr>";
 	echo "---------CONTACTO ENCONTRADO---------";
 	$im=$row["Nombre"];
@@ -32,8 +34,9 @@ while ($row = mysql_fetch_array($result)) {
 
 echo "</tr>";
 }
-
-
+if($encon == False){
+	echo "No se encontraron coincidencias.";
+}
 ?>
 <html>
 <head>
