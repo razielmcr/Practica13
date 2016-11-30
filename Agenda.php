@@ -55,7 +55,6 @@
 
 
 <div id = "parteListar">
-	<button onclick="mostrar();">Listar todos los contactos</button>
 </div>
 
 <div id="otro">
