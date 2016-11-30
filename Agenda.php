@@ -55,6 +55,14 @@
 
 
 <div id = "parteListar">
+<form action="listar.php" method="post" enctype="application/x-www-form-urlencoded">
+	
+<table>
+	<tr>		
+	<td><input type="submit" value="Listar todos los contactos." /></td>
+	</tr>
+</table>
+</form>
 </div>
 
 <div id="otro">
