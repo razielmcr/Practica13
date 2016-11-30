@@ -66,6 +66,12 @@
 </div>
 
 <div id="otro">
+
+<form action="busqueda.php" method="post" enctype="application/x-www-form-urlencoded">
+  Busqueda:<br>
+  <input type="text" name="busqueda"><br>
+  <input type="submit" value="Buscar" />
+</form >
 						
 
 </div>

@@ -1,6 +1,7 @@
 <?php
+$busqueda=$_POST["busqueda"];
 
-$consulta="SELECT * FROM contacto";
+$consulta="SELECT * FROM contacto WHERE Nombre = '$busqueda' or Apellido = '$busqueda'";
 $user="root";
 $pass="pass";
 $server="localhost";
@@ -11,7 +12,7 @@ mysql_select_db($db, $link);
 $result = mysql_query($consulta, $link);
 while ($row = mysql_fetch_array($result)) {
 	echo "<tr>";
-	echo "---------CONTACTO---------";
+	echo "---------CONTACTO ENCONTRADO---------";
 	$im=$row["Nombre"];
 	echo "<br>";
 	echo "Nombre: " . $im;
@@ -31,10 +32,13 @@ while ($row = mysql_fetch_array($result)) {
 
 echo "</tr>";
 }
+
+
 ?>
+<!DOCTYPE html>
 <html>
 <head>
-	<title>Contactos listados</title>
+	<title>Contactos encontrados</title>
 </head>
 <body><a href="Agenda.php"> Haz click aqui para volver.</a>
 
