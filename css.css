@@ -1,0 +1,31 @@
+     body{
+       background-color:  #F08080;
+      }  
+
+  #inicio {
+		font-size: 50px;
+	 	font-family: Palatino Linotype; 
+	 	color: red;
+	 	margin-left: 30px;
+	}
+
+  #parteAgregar{
+    margin-left: 10px;
+    font-family: Comic Sans MS;
+    background-color:   #7CFC00; 
+
+  }
+  #parteListar{
+    font-family: Courier New;
+    background-color: #778899;
+  }
+  #otro{
+    font-family: Courier New;
+    background-color: #778899;
+    float: left;
+    overflow: auto;
+  }
+  #parteBorrar{
+     font-family: Courier New;
+     background-color:  #191970;
+  }
